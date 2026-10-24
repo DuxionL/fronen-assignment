@@ -1,0 +1,45 @@
+.list {
+  display: grid;
+  gap: 0;
+  max-width: 40rem;
+  margin: 0 0 2rem;
+}
+.row {
+  display: grid;
+  gap: 0.15rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 40rem) {
+  .row {
+    grid-template-columns: 9rem 1fr;
+    gap: 1.5rem;
+  }
+}
+.row dt {
+  color: var(--text-muted);
+}
+.row dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+.mail {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  margin-right: 0.75rem;
+  padding: 0.7rem 1.75rem;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--charcoal);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+.mail:hover {
+  background: var(--crimson-soft);
+}
+.ghost {
+  margin-top: 0.5rem;
+}

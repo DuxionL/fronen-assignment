@@ -1,0 +1,46 @@
+.card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--olive);
+  border-radius: var(--radius);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--earth-deep) 38%, var(--charcoal-raised)),
+    var(--charcoal-raised) 70%
+  );
+  text-decoration: none;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.crimson {
+  border-left-color: var(--crimson-soft);
+}
+.gold {
+  border-left-color: var(--gold);
+}
+.earth {
+  border-left-color: var(--earth);
+}
+.card:hover {
+  border-color: var(--gold);
+  background: color-mix(in srgb, var(--crimson) 35%, var(--charcoal-raised));
+}
+
+.text h3 {
+  font-size: 1.35rem;
+}
+.role {
+  margin-top: 0.15rem;
+  color: var(--gold);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.summary {
+  margin-top: 0.6rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.55;
+}

@@ -1,0 +1,122 @@
+:root {
+  --charcoal: #1e1b2f;
+  --charcoal-raised: #2a2640;
+  --crimson: #58426b;
+  --crimson-soft: #ea988f;
+  --olive: #598972;
+  --olive-soft: #8fc2a8;
+  --gold: #ecca78;
+  --earth: #a07c5b;
+  --earth-deep: #3b2f33;
+
+  --text: #f2ece4;
+  --text-muted: #bdb4c9;
+  --line: rgba(236, 202, 120, 0.16);
+
+  --font-display: "Fraunces Variable", Georgia, "Times New Roman", serif;
+  --font-body: "Instrument Sans Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --radius: 14px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --navbar-h: 4.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse at 12% 14%, rgba(88, 66, 107, 0.24), transparent 34rem),
+    radial-gradient(ellipse at 88% 42%, rgba(89, 137, 114, 0.18), transparent 38rem),
+    radial-gradient(ellipse at 52% 100%, rgba(160, 124, 91, 0.14), transparent 42rem),
+    var(--charcoal);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 560;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--crimson-soft);
+  color: var(--charcoal);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background: var(--gold);
+  color: var(--charcoal);
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

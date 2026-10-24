@@ -1,0 +1,81 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(
+    in srgb,
+    var(--earth-deep) 28%,
+    color-mix(in srgb, var(--charcoal) 88%, transparent)
+  );
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--navbar-h);
+}
+
+.brand {
+  display: inline-flex;
+  padding: 0.5rem 0;
+  margin-left: auto;
+}
+
+.menu ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.toggle {
+  display: none;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-left: -0.6rem;
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+@media (max-width: 47.99rem) {
+  .toggle {
+    display: grid;
+  }
+
+  .menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    display: none;
+    padding: 0.5rem var(--gutter) 1.25rem;
+    background: color-mix(in srgb, var(--earth-deep) 28%, var(--charcoal));
+    border-bottom: 1px solid var(--line);
+  }
+  .menuOpen {
+    display: block;
+  }
+  .menu ul {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .menu li a {
+    display: block;
+    padding-block: 0.75rem;
+    font-size: 1.15rem;
+  }
+}

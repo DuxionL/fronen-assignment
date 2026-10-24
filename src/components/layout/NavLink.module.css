@@ -1,0 +1,32 @@
+.link {
+  position: relative;
+  display: inline-block;
+  padding-block: 0.4rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.link:hover {
+  color: var(--text);
+}
+
+.active {
+  color: var(--gold);
+}
+.active::after {
+  transform: scaleX(1);
+}

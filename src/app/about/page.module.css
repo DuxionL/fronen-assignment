@@ -1,0 +1,132 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.85fr);
+  align-items: flex-start;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+  margin-top: 2rem;
+}
+
+.copy {
+  min-width: 0;
+}
+
+.heading {
+  margin-bottom: 2rem;
+}
+
+.heading h1 {
+  margin: 0;
+  font-size: clamp(3.4rem, 5vw, 6rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+  font-weight: 500;
+}
+
+.heading p {
+  margin: 1rem 0 0;
+  font-size: clamp(1.1rem, 1.4vw, 1.5rem);
+  color: var(--text-muted);
+}
+
+.story {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 42rem;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.story p {
+  margin: 0;
+}
+
+.imageWrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 0;
+  padding-top: 0.5rem;
+}
+
+.image {
+  width: min(100%, 38rem);
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 1.5rem 2.2rem rgba(0, 0, 0, 0.28));
+}
+
+@media (max-width: 62rem) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .imageWrap {
+    order: -1;
+  }
+}
+
+.section {
+  margin-top: clamp(3rem, 8vw, 5rem);
+}
+.section h2 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  margin-bottom: 1.5rem;
+}
+
+.values {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 48rem) {
+  .values {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.value {
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, var(--accent) 15%, var(--charcoal-raised)),
+    var(--charcoal-raised) 76%
+  );
+  border-top: 3px solid var(--accent);
+}
+.value h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.value p {
+  color: var(--text-muted);
+}
+.gold {
+  --accent: var(--gold);
+}
+.olive {
+  --accent: var(--olive);
+}
+.crimson {
+  --accent: var(--crimson-soft);
+}
+
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 40rem;
+  border-left: 1px solid var(--earth);
+}
+.timeline li {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0 0 1.75rem 1.5rem;
+}
+.year {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--gold);
+}
+.timeline p {
+  color: var(--text-muted);
+}
